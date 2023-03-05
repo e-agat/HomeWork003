@@ -8,8 +8,11 @@ Console.Clear();
 int GetSum(int sum)
 {
     int result = 0;
-    for (int i = sum; i > 1; i %= 10)
+  
+    
+    for (int i = sum; i > 1; sum =sum/10)
     {
+        i=i% 10;
         result = +i;
     }
     return result;
@@ -17,6 +20,6 @@ int GetSum(int sum)
 }
 
 Console.WriteLine("Введите число ");
-int a = int.Parse(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"Сумма цифр числа {a} равно {GetSum(a)}");
